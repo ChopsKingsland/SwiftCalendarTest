@@ -3,10 +3,14 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C800843526EE9A9800F610E2 /* DateGrid in Frameworks */ = {isa = PBXBuildFile; productRef = C800843426EE9A9800F610E2 /* DateGrid */; };
+		C800843926EE9BAF00F610E2 /* CalendarMode.swift in Sources */ = {isa = PBXBuildFile; fileRef = C800843826EE9BAF00F610E2 /* CalendarMode.swift */; };
+		C800843B26EE9E7900F610E2 /* DateCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C800843A26EE9E7900F610E2 /* DateCell.swift */; };
+		C892BC282610A6E800EC6354 /* userModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C892BC272610A6E800EC6354 /* userModel.swift */; };
 		C8F321082610882F005A565A /* calendarApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8F321072610882F005A565A /* calendarApp.swift */; };
 		C8F3210A2610882F005A565A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8F321092610882F005A565A /* ContentView.swift */; };
 		C8F3210C26108830005A565A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C8F3210B26108830005A565A /* Assets.xcassets */; };
@@ -33,6 +37,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		C800843826EE9BAF00F610E2 /* CalendarMode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarMode.swift; sourceTree = "<group>"; };
+		C800843A26EE9E7900F610E2 /* DateCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateCell.swift; sourceTree = "<group>"; };
+		C892BC272610A6E800EC6354 /* userModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = userModel.swift; sourceTree = "<group>"; };
 		C8F321042610882F005A565A /* calendar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = calendar.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C8F321072610882F005A565A /* calendarApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = calendarApp.swift; sourceTree = "<group>"; };
 		C8F321092610882F005A565A /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -52,6 +59,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C800843526EE9A9800F610E2 /* DateGrid in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -95,8 +103,11 @@
 		C8F321062610882F005A565A /* calendar */ = {
 			isa = PBXGroup;
 			children = (
+				C892BC272610A6E800EC6354 /* userModel.swift */,
 				C8F321072610882F005A565A /* calendarApp.swift */,
 				C8F321092610882F005A565A /* ContentView.swift */,
+				C800843826EE9BAF00F610E2 /* CalendarMode.swift */,
+				C800843A26EE9E7900F610E2 /* DateCell.swift */,
 				C8F3210B26108830005A565A /* Assets.xcassets */,
 				C8F3211026108830005A565A /* Info.plist */,
 				C8F3210D26108830005A565A /* Preview Content */,
@@ -146,6 +157,9 @@
 			dependencies = (
 			);
 			name = calendar;
+			packageProductDependencies = (
+				C800843426EE9A9800F610E2 /* DateGrid */,
+			);
 			productName = calendar;
 			productReference = C8F321042610882F005A565A /* calendar.app */;
 			productType = "com.apple.product-type.application";
@@ -217,6 +231,9 @@
 				Base,
 			);
 			mainGroup = C8F320FB2610882F005A565A;
+			packageReferences = (
+				C800843326EE9A9800F610E2 /* XCRemoteSwiftPackageReference "DateGrid" */,
+			);
 			productRefGroup = C8F321052610882F005A565A /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -259,8 +276,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C800843926EE9BAF00F610E2 /* CalendarMode.swift in Sources */,
+				C800843B26EE9E7900F610E2 /* DateCell.swift in Sources */,
 				C8F3210A2610882F005A565A /* ContentView.swift in Sources */,
 				C8F321082610882F005A565A /* calendarApp.swift in Sources */,
+				C892BC282610A6E800EC6354 /* userModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -580,6 +600,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		C800843326EE9A9800F610E2 /* XCRemoteSwiftPackageReference "DateGrid" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/yodagamaheshan/DateGrid.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.0.3;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		C800843426EE9A9800F610E2 /* DateGrid */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C800843326EE9A9800F610E2 /* XCRemoteSwiftPackageReference "DateGrid" */;
+			productName = DateGrid;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = C8F320FC2610882F005A565A /* Project object */;
 }

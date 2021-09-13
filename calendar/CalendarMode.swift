@@ -6,3 +6,17 @@
 //
 
 import Foundation
+import SwiftUI
+
+enum CalenderMode {
+    case month(estimateHeight: CGFloat)
+    case week(estimateHeight: CGFloat)
+    var estimateHeight: CGFloat {
+        switch self {
+        case .month(estimateHeight: let estimateHeight):
+            return estimateHeight
+        case .week(estimateHeight: let estimateHeight):
+            return estimateHeight
+        }
+    }
+}
